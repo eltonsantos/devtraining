@@ -11,7 +11,7 @@ import { DatabaseModule } from './database/database.module';
     DatabaseModule,
     // TypeOrmModule.forRoot({
     //   type: 'postgres',
-    //   host: 'localhost',
+    //   host: 'db',
     //   port: 5432,
     //   username: 'postgres',
     //   password: 'postgres',
