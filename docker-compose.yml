@@ -4,7 +4,7 @@ services:
   app:
     build: .
     entrypoint: .docker/entrypoint.sh
-    container_name: cursonestjs-app
+    container_name: devtraining
     ports:
       - "3001:3000"
     volumes:
@@ -14,7 +14,7 @@ services:
 
   db:
     build: .docker/postgres
-    container_name: cursonestjs-db
+    container_name: devtraining
     restart: always
     tty: true
     ports:
@@ -22,12 +22,12 @@ services:
     volumes:
       - .docker/dbdata:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=docker
-      - POSTGRES_DB=cursonestjs
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=devtraining
   
   dbtest:
     build: .docker/postgres
-    container_name: cursonestjs-dbtest
+    container_name: devtraining-dbtest
     restart: always
     tty: true
     ports:
@@ -35,8 +35,8 @@ services:
     volumes:
       - .docker/dbdatatest:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=docker
-      - POSTGRES_DB=testdb
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=devtraining-dbtest
 
 
 #  pgadmin:
