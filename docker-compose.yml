@@ -38,7 +38,6 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=devtraining-dbtest
 
-
 #  pgadmin:
 #    image: dpage/pgadmin4
 #    container_name: cursonestjs-pgadmin
